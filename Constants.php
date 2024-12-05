@@ -83,7 +83,6 @@ class Constants
      */
     const CARD_HOLDER_NAME_MANDATORY = 'MANDATORY';
 
-
     /**
      * Masterpass wallet
      */
@@ -93,6 +92,11 @@ class Constants
      * Applepay wallet
      */
     const SAFERPAY_APPLEPAY_WALLET = 'APPLEPAY';
+
+    /**
+     * ClickToPay wallet
+     */
+    const SAFERPAY_CLICKTOPAY_WALLET = 'CLICKTOPAY';
 
     /**
      * Capture action

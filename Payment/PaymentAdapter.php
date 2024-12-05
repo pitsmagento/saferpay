@@ -56,9 +56,12 @@ class PaymentAdapter extends BuildContainer implements PaymentAdapterInterface
             $initializeData['Payer'] = $payerData;
         }
         if (isset($bodyData['payment_method'])) {
-            if (($bodyData['payment_method'] == Constants::SAFERPAY_MASTERPASS_WALLET) ||
-                ($bodyData['payment_method'] == Constants::SAFERPAY_APPLEPAY_WALLET) ||
-                ($bodyData['payment_method'] == Constants::SAFERPAY_GOOGLEPAY_WALLET)) {
+            if (
+                $bodyData['payment_method'] == Constants::SAFERPAY_MASTERPASS_WALLET ||
+                $bodyData['payment_method'] == Constants::SAFERPAY_APPLEPAY_WALLET ||
+                $bodyData['payment_method'] == Constants::SAFERPAY_GOOGLEPAY_WALLET ||
+                $bodyData['payment_method'] == Constants::SAFERPAY_CLICKTOPAY_WALLET
+            ) {
                 $initializeData['Wallets'] = [$bodyData['payment_method']];
             } else {
                 $initializeData['PaymentMethods'] = [$bodyData['payment_method']];
